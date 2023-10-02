@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Play</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn {
+            background-color: whitesmoke;
+            border: 2px solid black;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+
+        .navbar input {
+            width: 100%;
+            padding: 5px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .navbar li a:hover {
+            color: cadetblue;
+        }
+
+        .songform {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="file"],
+        input[type="time"],
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            li {
+                padding: 10px;
+            }
+
+            .btn {
+                padding: 5px 15px;
+            }
+
+            .navbar input {
+                padding: 5px 8px;
+            }
+
+            .songform {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><button class="btn">Sign In</button></li>
+            <li><button class="btn">Log In</button></li>
+            <li><a href="#">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="songform">
+    <h1 id="formH1">Upload Your Music</h1>
+    <form action="" class="form-styling">
+        <label for="musicFile">Select a music file:</label>
+        <input type="file" id="musicFileId" name="musicFileName" accept=".mp3,.wav">
+        <label for="DurationId">Duration</label>
+        <input type="time" name="DurationName" id="DurationId">
+        <label for="SongId">Song Name</label>
+        <input type="text" name="SongName" id="SongId">
+        <label for="SingerId">Singer</label>
+        <input type="text" name="SingerName" id="SingerId">
+        <label for="AlbumId">Album</label>
+        <input type="text" name="AlbumName" id="AlbumId">
+        <label for="MusicId">Music</label>
+        <input type="text" name="MusicName" id="MusicId">
+        <label for="LyricsId">Lyrics</label>
+        <input type="text" name="LyricsName" id="LyricsId">
+        <label for="DirectorId">Director</label>
+        <input type="text" name="DirectorName" id="DirectorId">
+        <label for="MusicLabelId">Music Label</label>
+        <input type="text" name="MusicLabelName" id="MusicLabelId">
+        <button class="submit-btn" type="submit">Upload</button>
+    </form>
+</div>
+</body>
+</html>
